@@ -1,0 +1,258 @@
+html { /*enable smooth scrolling when clicking buttons*/
+  scroll-behavior: smooth; 
+}
+
+body { /*ensure that takes the full screen*/
+  background-color: #151326;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin-top: 70px;
+  padding: 0;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  min-height: 100vh; 
+}
+
+.header { /*for the header style*/
+  width: 100%;
+  padding: 20px;
+  position: fixed; /*so it stays in top*/
+  top: 0;
+  left: 0;
+  background-color: #151326;
+  display: flex;
+  justify-content: flex-end; /*so button it stays in right*/
+  align-items: center;
+  padding-right: 70px;
+  z-index: 1000; /*so it stays in top of other content*/
+}
+
+.navbar {
+  display: flex;
+  gap: 20px; /*spacing between the items*/
+  margin-right: 80px;
+}
+
+.nav-btn { /*buttons styles*/
+  background-color: #ccc;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px; /*adds rounded corner*/
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.nav-btn:hover {
+  background-color: #aaa;
+  transform: scale(1.05); /*style when it hovered*/
+}
+
+.main-content { /*so the content remains in the center*/
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.picture { /*used so the description can be place beside the picture*/
+  display: flex;
+  align-items: center;
+  gap: 20px; /*spacing between them*/
+  margin-top: 50px;
+}
+
+.profile-image { /*design the profile pic*/
+  width: 180px;
+  height: 300px;
+  border-radius: 20%;
+  object-fit: cover; /*to properly cropped the image*/
+  border: 3px solid white;
+}
+
+.container { /*organizes text in the profile*/
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.box { /*keep the box transparent*/
+  background-color: transparent;
+  padding: 20px;
+}
+
+.heropage {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.moto {
+  font-size: 25px;
+  font-style: italic;
+}
+
+/*for the style of about me*/
+.about-me {
+  width: 90%;
+  max-width: 900px;
+  padding: 20px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 40px;
+}
+
+.about-me h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.about-me p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #d1d1d1;
+  text-align: justify;
+}
+
+/*style for the skills*/
+.skills {
+  width: 80%;
+  max-width: 900px;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  margin-top: 40px; 
+}
+
+.skills h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.skill-category {
+  margin-bottom: 20px;
+}
+
+.skill-category h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+/*layout of the skills*/
+.skill-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+/*label of skills*/
+.skill-box span {
+  font-size: 20px;
+  font-weight: 500;
+  color: #d1d1d1;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+/*to center the project section*/
+.projects { 
+  width: 90%;
+  max-width: 1100px;
+  padding: 20px;
+  margin-top: 40px;
+
+}
+
+.projects h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+/*so it can display in only 2 layouts*/
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 900px;
+}
+
+/*centers the items*/
+.project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/*keep the image fit*/
+.project-image {
+  width: 100%;
+  height: 250px; 
+  border-radius: 5px;
+}
+
+.project-description {
+  font-size: 18px; 
+  font-weight: 400;
+  color: #d1d1d1;
+  text-align: center;
+}
+
+/*for footer design*/
+.footer {
+  background-color: #151326;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/*for icons*/
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  padding: 8px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/*for footer text the copy right*/
+.footer-text {
+  font-size: 14px;
+  margin-right: 20px;
+}
